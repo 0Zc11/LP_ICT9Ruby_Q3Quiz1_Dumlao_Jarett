@@ -5,73 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>arithmetic</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";; rel="stylesheet">
+    <style>
+        .header{
+            background-color: black;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+        }
+        .answers{
+            color: green;
+        }
+        .container{
+            text-align: center;
+        }
+        .megacontainer{
+            border: 5px black solid;
+            background-image: linear-gradient(gray, white);
+            padding: 5px;
+        }
+        .button1 {
+            background-color: gold;
+            border-radius: 5px;
+            border: none;
+            color: black;
+            padding: 8px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .button2 {
+            background-color: black;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .button3 {
+            background-color: green;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    <h1>If a = 20 and b = 5, compute for the following</h1>
+    <h1 class="header">If a = 20 and b = 5, compute for the following</h1>
 
-<h3>Arithmetic operator</h3>
-
-    <div class="container">
-        <script>
-            var a, b, ExpResult, mod,
-            a = 20;
-            b = 5;
-            ExpResult = a**b; 
-            mod = a % b;
-        </script>
-    <div id="Answer1">
-        <p>a. Exponent:</p>
-        <p>b. Mod:</p>
-    </div>
-    <button type="button" 
-        onclick = "document.getElementById('Answer1').innerHTML = 
-        '<p>a. Exponent:' + ExpResult + '<p>' + 
-        '<p>b. Mod:' + mod + '<p>'"
-        > Show Answer </button>
-    </div>
-
-    <br>
-<h3>Comparison operator</h3>
-
-    <div class="container">
-        <script>
-            var a, b, IsGreat, IsEqual,
-            a = 20;
-            b = 5;
-            IsGreat = a > b; 
-            IsEqual = a == b;
-        </script>
-    <div id="Answer2">
-        <p>a. is a greater than b?:</p>
-        <p>b. is a equal to b?:</p>
-    </div>
-    <button type="button" 
-        onclick = "document.getElementById('Answer2').innerHTML = 
-        '<p>a. is a greater than b?:' + IsGreat + '<p>' + 
-        '<p>b. is a equal to b?:' + IsEqual + '<p>'"
-        > Show Answer </button>
-    </div>
-
-    <br>
-<h3>Logical operator</h3>
-    
+    <div class="megacontainer">
         <div class="container">
-            <script>
-                var a, b, IsGreat, IsEqual,
-                a = 20;
-                b = 5;
-                and = (a <= b) && (a >= b); 
-                or = (a != b) || (a == b);
-            </script>
-        <div id="Answer3">
-            <p>a. (a <= b) && (a >= b):</p>
-            <p>b. (a != b) || (a == b)</p>
-        </div>
-        <button type="button" 
-            onclick = "document.getElementById('Answer3').innerHTML = 
-            '<p>a. (a <= b) && (a >= b):' + and + '<p>' + 
-            '<p>b. (a != b) || (a == b):' + or + '<p>'"
+            <h3>Arithmetic operator</h3>
+                <script>
+                    var a, b, ExpResult, mod,
+                    a = 20;
+                    b = 5;
+                    ExpResult = a**b; 
+                    mod = a % b;
+                </script>
+            <div id="Answer1" class="answers">
+                <p>a. Exponent:</p>
+                <p>b. Mod:</p>
+            </div>
+            <button type="button" class="button1" 
+                onclick = "document.getElementById('Answer1').innerHTML = 
+                '<p>a. Exponent:' + ExpResult + '<p>' + 
+                '<p>b. Mod:' + mod + '<p>'"
             > Show Answer </button>
         </div>
+    
+        <br>
+    
+        <div class="container">
+            <h3>Comparison operator</h3>
+                <script>
+                    var a, b, IsGreat, IsEqual,
+                    a = 20;
+                    b = 5;
+                    IsGreat = a > b; 
+                    IsEqual = a == b;
+                </script>
+            <div id="Answer2" class="answers">
+                <p>a. is a greater than b?:</p>
+                <p>b. is a equal to b?:</p>
+            </div>
+            <button type="button" class="button2"
+                onclick = "document.getElementById('Answer2').innerHTML = 
+                '<p>a. is a greater than b?:' + IsGreat + '<p>' + 
+                '<p>b. is a equal to b?:' + IsEqual + '<p>'"
+            > Show Answer </button>
+        </div>
+    
+        <br>
+        
+        <div class="container">
+            <h3>Comparison operator</h3>
+                <script>
+                    var a, b, IsGreat, IsEqual,
+                    a = 20;
+                    b = 5;
+                    and = (a <= b) && (a >= b); 
+                    or = (a != b) || (a == b);
+                </script>
+            <div id="Answer3" class="answers">
+                <p>a. (a <= b) && (a >= b):</p>
+                <p>b. (a != b) || (a == b)</p>
+            </div>
+            <button type="button" class="button3"
+                onclick = "document.getElementById('Answer3').innerHTML = 
+                '<p>a. (a <= b) && (a >= b):' + and + '<p>' + 
+                '<p>b. (a != b) || (a == b):' + or + '<p>'"
+            > Show Answer </button>
+        </div>   
+    </div>
 </body>
 </html>
